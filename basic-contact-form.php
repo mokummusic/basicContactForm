@@ -3,7 +3,7 @@
  * Plugin Name: Basic Contact Form
  * Plugin URI: http://www.functionsphp.com/basic-contact-form
  * Description: A very basic contact form shortcode. No-frills! If you want to change the messages or add a spam question, you can do so in the admin settings.
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Mokum Music
  * Author URI: http://www.mokummusic.com
  * License: GPL2
@@ -11,7 +11,7 @@
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function enqueue_bcf_style() {
-    wp_register_style('bcfStyleSheet',  plugins_url('/basic-contact-form.min.css', __FILE__ ),'','0.0.2');
+    wp_register_style('bcfStyleSheet',  plugins_url('/basic-contact-form.min.css', __FILE__ ),'','0.0.3');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_bcf_style');
 add_action( 'admin_menu', 'bcf_add_admin_menu' );
@@ -143,7 +143,7 @@ function bcf_render_contact_form() {
     $html .= '<p><label for="name">Name: <span>*</span> <br><input type="text" name="message_name" value="'. esc_attr($_POST['message_name']).'"></label></p>';
     $html .= '<p><label for="message_email">Email: <span>*</span> <br><input type="email" name="message_email" value="'. esc_attr($_POST['message_email']).'"></label></p>';
     $html .= '<p><label for="message_text">Message: <span>*</span> <br><textarea type="text" rows=10 name="message_text">'.esc_textarea($_POST['message_text']).'</textarea></label></p><p>';
-    if ($options['bcf_spamtrap'] == 1) $html .= '<label for="message_human">Human Verification: <span>*</span> <br><div class="bcf-question">'.$options['bcf_question'].'</div> <input type="text" class="human-verify-input" name="message_human"></label>';
+    if ($options['bcf_spamtrap'] == 1) $html .= '<label for="message_human">Human Verification: <span>*</span> <br><div class="bcf-question">'.$options['bcf_question'].'</div> <input type="text" id="human-verify-input" name="message_human"></label>';
     $html .= '<input type="hidden" name="submitted" value="1"><input class="bcf-submit" type="submit"></p></form>';
     return $html;
 }
