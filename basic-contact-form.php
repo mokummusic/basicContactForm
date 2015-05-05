@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Basic Contact Form
  * Plugin URI: http://www.functionsphp.com/basic-contact-form
- * Description: A very basic contact form shortcode. No-frills! If you want to change the messages or add a spam question, you can do so in the admin settings.
- * Version: 0.0.4
+ * Description: A very basic contact form shortcode. No-frills! All it does is collect the persons name, email and message. There's also an optional spamblock. If you want to change the spam question, you can do so in the admin settings.
+ * Version: 0.0.5
  * Author: Mokum Music
  * Author URI: http://www.mokummusic.com
  * License: GPL2
@@ -15,7 +15,7 @@ add_action( 'admin_menu', 'bcf_add_admin_menu' );
 add_action( 'admin_init', 'bcf_settings_init' );
 
 function enqueue_bcf_style() {
-    wp_register_style('bcfStyleSheet',  plugins_url('/basic-contact-form.min.css', __FILE__ ),'','0.0.4');
+    wp_register_style('bcfStyleSheet',  plugins_url('/basic-contact-form.min.css', __FILE__ ),'','0.0.5');
 }
 function bcf_add_admin_menu(  ) { 
     add_options_page( 'Basic Contact Form', 'Basic Contact Form', 'manage_options', 'basic_contact_form', 'bcf_options_page' );
