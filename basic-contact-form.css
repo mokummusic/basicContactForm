@@ -19,9 +19,18 @@
 }
 
 .human-verify-input {
-  width:60px;
+  width:160px;
+}
+
+.bcf-question {
+  font-family: courier, Fixed, monospace;
+  display: inline-block;
 }
 
 .bcf-submit {
-  float:right;
+  display: inline-block;
+}
+
+input.human-verify-input {
+  margin-right: 10px;
 }
