@@ -8,6 +8,40 @@
   margin-bottom: 10px;
 }
 
+#contact-respond {
+clear: both;
+width: 90%;
+margin: 0 auto;
+}
+
+#contact-respond #human-verify-input {
+  width: 160px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#contact-respond textarea, #contact-respond input[type="text"], #contact-respond input[type="email"] {
+  width: 100%;
+}
+
+.contact-error {
+  padding: 5px 9px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 3px;
+}
+
+.contact-success {
+  padding: 5px 9px;
+  border: 1px solid green;
+  color: green;
+  border-radius: 3px;
+}
+
+#contact-response form span{
+  color: red;
+}
+
 .bcf-error {
   background: #f00000;
   color: #fff;
