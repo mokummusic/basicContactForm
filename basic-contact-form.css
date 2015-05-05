@@ -20,6 +20,7 @@
 
 #human-verify-input {
   width:160px;
+  margin-right: 10px;
 }
 
 .bcf-question {
@@ -29,8 +30,4 @@
 
 .bcf-submit {
   display: inline-block;
-}
-
-input.human-verify-input {
-  margin-right: 10px;
 }
