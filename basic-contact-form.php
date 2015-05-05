@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Basic Contact Form
  * Plugin URI: http://www.functionsphp.com/basic-contact-form
- * Description: A very basic contact form shortcode. No-frills! If you want to change the messages or spam question, you can do so in the admin settings.
- * Version: 0.0.1
+ * Description: A very basic contact form shortcode. No-frills! If you want to change the messages or add a spam question, you can do so in the admin settings.
+ * Version: 0.0.2
  * Author: Mokum Music
  * Author URI: http://www.mokummusic.com
  * License: GPL2
@@ -112,7 +112,7 @@ function bcf_render_contact_form() {
     wp_enqueue_style('bcfStyleSheet');
     $options = get_option( 'bcf_settings' );
     $to = $options['bcf_to_address']?$options['bcf_to_address']:get_option('admin_email');
-    $subject = "New Contact Form Message on ".get_bloginfo('name');
+    $subject = "Contact Form Message from ".get_bloginfo('name');
     $headers = 'From: '. $_POST['message_email'] . "\r\n" .'Reply-To: ' . $_POST['message_email'] . "\r\n";
     $html = '<div id="contact-response">';
     if (isset($_POST['submitted'])) {
