@@ -1,0 +1,26 @@
+#contact-response div {
+  width: 100%;
+  display: block;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: #666 1px solid;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.bcf-error {
+  background: #f00000;
+}
+
+.bcf-success {
+  background: #00f000;
+}
+
+.human-verify-input {
+  width:60px;
+}
+
+.bcf-submit {
+  float:right;
+}
