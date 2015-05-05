@@ -12,7 +12,7 @@
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 function enqueue_bcf_style() {
-    wp_register_style('bcfStyleSheet',  plugins_url('/basic-contact-form.css', __FILE__ ),'','0.0.1');
+    wp_register_style('bcfStyleSheet',  plugins_url('/basic-contact-form.min.css', __FILE__ ),'','0.0.1');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_bcf_style');
 add_shortcode('contactus', 'bcf_render_contact_form');

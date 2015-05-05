@@ -5,16 +5,17 @@
   padding: 6px 10px;
   border-radius: 10px;
   border: #666 1px solid;
-  color: #fff;
   margin-bottom: 10px;
 }
 
 .bcf-error {
   background: #f00000;
+  color: #fff;
 }
 
 .bcf-success {
   background: #00f000;
+  color: #333;
 }
 
 .human-verify-input {
